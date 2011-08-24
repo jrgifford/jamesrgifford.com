@@ -1,0 +1,187 @@
+/*
+** Toast CSS Framework - 1.1
+** Dan Eden wrote this - @dan_eden - http://daneden.me/
+** Inspired by and based on Andy Taylor's CSS Grid - http://cssgrid.net/
+**
+** ----------------------------------------------------------------------------------------------------------------------------
+**
+** Welcome, young warrior! BE WARY - This framework is delicate, and will fall on your head if you change things too much.
+** Things you can probably change safely are the max-width of .row, the padding of the container, and... well. That's about it.
+*/
+
+/* import stylesheets and hide from IE/Mac (courtesy of Dan Cederholm - http://simplebits.com) \*/
+@import url("reset.css");
+@import url("ie.css");
+@import url("type.css"); /* this is optional - it sets some default typography for your site, for beautiful vertical rhythm. Set at 16px (1em) with 24px line-height (1.5em) */
+/* end import/hide */
+
+.container { /* This stops your content from getting crumbs on the side of the window */
+	padding: 0 20px;
+}
+
+.row {
+	max-width: 1140px;
+	margin: 0 auto;
+	overflow: hidden;
+	min-width: 755px;
+}
+
+.smallscreen .row { /* If you'd like to keep your toast thinly sliced, add a smallscreen class to the container */
+	max-width: 940px;
+}
+
+.col_1, .col_2, .col_3,
+.col_4, .col_5, .col_6,
+.col_7, .col_8, .col_9,
+.col_10, .col_11, .col_12 {
+	display: inline;
+	margin-right: 3.8%;
+	float: left;
+	min-height: 1px;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.push_1, .pull_1, .push_2, .pull_2,
+.push_3, .pull_3, .push_4, .pull_4,
+.push_5, .pull_5, .push_6, .pull_6,
+.push_7, .pull_7, .push_8, .pull_8,
+.push_9, .pull_9, .push_10, .pull_10,
+.push_11, .pull_11, .push_12, .pull_12 {
+	position: relative;
+}
+
+/* I didn't calculate these widths, Andy Taylor of http://cssgrid.net/ did. You should thank him! */
+
+.col_1 { width: 4.85%; }
+.col_2 { width: 13.45%; }
+.col_3 { width: 22.13%; }
+.col_4 { width: 30.75%; }
+.col_5 { width: 39.45%; }
+.col_6 { width: 48%; }
+.col_7 { width: 56.75%; }
+.col_8 { width: 65.4%; }
+.col_9 { width: 74.05%; }
+.col_10 { width: 82.7%; }
+.col_11 { width: 91.35%; }
+.col_12 { width: 100%; }
+
+.push_1 { left: 4.85%; }
+.push_2 { left: 13.45%; }
+.push_3 { left: 22.13%; }
+.push_4 { left: 30.75%; }
+.push_5 { left: 39.45%; }
+.push_6 { left: 48%; }
+.push_7 { left: 56.75%; }
+.push_8 { left: 65.4%; }
+.push_9 { left: 74.05%; }
+.push_10 { left: 82.7%; }
+.push_11 { left: 91.35%; }
+.push_12 { left: 100%; }
+
+.pull_1 { left: -4.85%; }
+.pull_2 { left: -13.45%; }
+.pull_3 { left: -22.13%; }
+.pull_4 { left: -30.75%; }
+.pull_5 { left: -39.45%; }
+.pull_6 { left: -48%; }
+.pull_7 { left: -56.75%; }
+.pull_8 { left: -65.4%; }
+.pull_9 { left: -74.05%; }
+.pull_10 { left: -82.7%; }
+.pull_11 { left: -91.35%; }
+.pull_12 { left: -100%; }
+
+/* per request from @amit_heroic, prefixes and suffixes like in 960.gs */
+
+.prefix_1 { margin-left: 8.65%; }
+.prefix_2 { margin-left: 17.25%; }
+.prefix_3 { margin-left: 25.93%; }
+.prefix_4 { margin-left: 34.55%; }
+.prefix_5 { margin-left: 43.25%; }
+.prefix_6 { margin-left: 51.8%; }
+.prefix_7 { margin-left: 60.55%; }
+.prefix_8 { margin-left: 69.2%; }
+.prefix_9 { margin-left: 77.85%; }
+.prefix_10 { margin-left: 86.5%; }
+.prefix_11 { margin-left: 95.15%; }
+.prefix_12 { margin-left: 103.8%; }
+
+.suffix_1 { margin-right: 12.6%; }
+.suffix_2 { margin-right: 21.15%; }
+.suffix_3 { margin-right: 29.83%; }
+.suffix_4 { margin-right: 38.45%; }
+.suffix_5 { margin-right: 47.05%; }
+.suffix_6 { margin-right: 55.7%; }
+.suffix_7 { margin-right: 64.35%; }
+.suffix_8 { margin-right: 73%; }
+.suffix_9 { margin-right: 81.65%; }
+.suffix_10 { margin-right: 90.3%; }
+.suffix_11 { margin-right: 98.95%; }
+.suffix_12 { margin-right: 107.6%; }
+
+/* People seem to avoid frameworks because of trouble with 'real' blocks - this will help! */
+
+.box { padding: .75em; } /* this will surely break the grid? not with box-sizing: border-box. Check the spec. */
+.box { padding: .75em .951%  !ie; } /* crummy IE */
+
+/* internet explorer gets a ton of specififed widths because it doesn't understand box-sizing in version 7. but weirdly enough, it does in 6! */
+.col_1.box { width: 3% !ie; }
+.col_2.box { width: 11.6% !ie; }
+.col_3.box { width: 20.18% !ie; }
+.col_4.box { width: 28.9% !ie; }
+.col_5.box { width: 37.42% !ie; }
+.col_6.box { width: 46.15% !ie; }
+.col_7.box { width: 54.9% !ie; }
+.col_8.box { width: 63.35% !ie; }
+.col_9.box { width: 72.1% !ie; }
+.col_10.box { width: 80.77% !ie; }
+.col_11.box { width: 89.3% !ie; }
+.col_12.box { width: 99% !ie; }
+
+/* fluid images, videos etc */
+
+img, object, embed, video { max-width: 100%; }
+img { height: auto; }
+
+/* Here's where it gets good. Remember .last? That's gone. Remember the clearfix? NOT UP IN HERE! */
+
+.row > :last-child {
+	margin-right: 0;
+}
+
+.nest > :last-child { /* nested grids */	
+	margin-right: 0;
+}
+
+.row:after {
+	content: ".";
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden;
+}
+
+/* media queries for mobile, tablet, and small screen friendly websites */
+
+@media screen and (max-width:960px) {
+	html, body {
+		font-size: 90%; /* tiny fonts for tiny screens */
+	}
+}
+
+@media screen and (max-width:775px) {
+	.respond .row {
+		width: auto;
+		min-width: 0;
+	}
+	
+	.respond .col_1, .respond .col_2, .respond .col_3, 
+	.respond .col_4, .respond .col_5, .respond .col_6, 
+	.respond .col_7, .respond .col_8, .respond .col_9, 
+	.respond .col_10, .respond .col_11, .respond .col_12 {
+		width: 100%;
+		margin-right: 0;
+	}
+}
