@@ -8,3 +8,5 @@ group :development, :test do
   gem 'heroku'
   gem 'therubyracer'
 end
+
+gem 'pg'
